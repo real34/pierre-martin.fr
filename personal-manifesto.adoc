@@ -4,9 +4,97 @@ Pierre Martin <@pierremartin>
 0.1, 2017-01-18
 
 == Concept
-Voir https://daringtolivefully.com/personal-manifesto[cet article expliquant le concept]
+Voir https://daringtolivefully.com/personal-manifesto[cet article expliquant le concept].
+
+C'est un _énoncé de mission_ permettant de formaliser ses valeurs, principes fondamentaux ainsi que ses idéaux. En exprimant les choses auxquelles on croit profondément et en vivant son manifeste au quotidien on adapte sa vie et ses actions vers notre être profond.
+
+Cela est donc d'une grande aide pour désencombrer son quotidien, le rendre plus simple et plus aligné avec soi. 
 
 == Mon manifeste
-_en cours de rédaction_
+NOTE: en cours de rédaction, au stade de liste d'idées et phrases inspirantes pour l'instant
 
-work hard in silence, let your success be your noise.
+Simplify your life
+
+Treat absolutely everyone with respect
+
+Être transparent, honnête, humble et sincère
+
+Turn off the TV, put away the phone and practice being present in your life
+
+Spend time of every day outside
+
+Be Kind
+
+Tell people you love that you love them
+
+Value experiences over stuff
+
+Work hard in silence, let your success be your noise.
+
+Learn to love your body and your stuff
+
+Eat good food
+
+Set goals and live with intent
+
+Build your life around your passions
+
+Let go off anything that does not bring you joy
+
+Gratitude, Compassion, Forgiveness
+
+Practice _random acts of kindness_
+
+Be the best possible version of yourself you can be
+
+Partager des repas "en présence" de ceux qu'on aime ... en famille
+
+Être fier de ses enfants
+
+Manger moins de viande
+
+Chance ou malchance, qui peut le dire ?.footnote:[http://www.lhibiscus.fr/chance-malchance.html:[Conte taoïste connu]]
+
+Nous ne sommes pas des victimes : soyons proactifs et responsables
+
+Agir dans et pour son _cercle d'influence_.footnote:[Source : les 7 habitudes (S. Covey). Voir un récapitulatif sur https://www.semaphorus.fr/outils/le-cercle-dinfluence/:[cette page par exemple].]
+
+Silence / Ordre (à sa place, au bon moment) / Frugalité / Courage / Modération (pas d'extrêmes) / Humilité
+
+An honest ego in a healthy body
+
+Saying no to thousand of projects so that we can focus on the few that are meaningful to us
+
+Toujours reconnaître ses erreurs
+
+Crée quelque chose *maintenant* !
+
+Se souvenir des bons moments et des moins bons : ce sont eux qui ont fait ce que nous sommes aujourd'hui
+
+Se lever à 5h, ne faire qu'une chose à la fois
+
+On peut être sérieux sans porter de costume.footnote:[Un des principes de https://www.google.com/about/company/philosophy/:[Google]]
+
+L'expertise est relative : nous sommes tous capable de bien plus qu'on ne le pense.
+
+Life is an experiment
+
+Learn more, do more, be more
+
+== Astuces / Conseils
+
+Ci-dessous une liste de conseils divers pour aider à maintenir ce document.
+
+=== Questions à se poser
+
+* How do you define yourself?
+* What do you stand for?
+* What quotes do you love ? What "words of wisdom" really speak to you?
+* How will you deal with *failures, mistakes, disappointment*?
+* What are your biggest dreams and goals in life?
+* Where / how do you want to spend money and time?
+
+=== Conseils
+
+* Finalize the manifesto. Print it out or publish it => challenge yourself to *actually live it*!
+* Make it public, or read it _every day_ (helps being accountable)
