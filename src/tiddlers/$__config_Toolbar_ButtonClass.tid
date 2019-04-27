@@ -1,6 +1,6 @@
 created: 20190427110933093
-modified: 20190427110940105
+modified: 20190427130721324
 title: $:/config/Toolbar/ButtonClass
 type: text/vnd.tiddlywiki
 
-tc-btn-rounded
+tc-btn-invisible

@@ -1,0 +1,11 @@
+created: 20170322105910944
+list-before: $:/core/ui/TopBar/menu
+modified: 20190427130738041
+tags: 
+title: $:/plugins/tongerner/sro/publish-button
+type: text/vnd.tiddlywiki
+
+<$button class="tc-btn-invisible" tooltip="Publish simple read-only">
+<$action-sendmessage $message="tm-open-window" $param="$:/plugins/tongerner/sro/publish" height="700px" width="500px"/>
+{{$:/plugins/tongerner/sro/images/publish}}
+</$button>

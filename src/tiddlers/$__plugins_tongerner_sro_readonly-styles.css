@@ -1,0 +1,26 @@
+/* Readonly styles for buttons */
+
+svg.tc-image-new-button,
+svg.tc-image-options-button,
+svg.tc-image-save-button,
+svg.tc-image-edit-button,
+svg.tc-image-delete-button,
+svg.tc-image-cancel-button,
+svg.tc-image-done-button,
+svg.tc-image-down-arrow,
+svg.tc-image-info-button,
+svg.tc-image-chevron-right,
+svg.tc-image-chevron-left,
+svg.tgc-publish-sro {
+     display: none;
+}
+
+/* Hide advanced search button */
+
+.tc-image-advanced-search-button.tc-image-button {
+     padding-left: 15px;
+}
+
+.tc-sidebar-lists {
+     display: none;
+}
