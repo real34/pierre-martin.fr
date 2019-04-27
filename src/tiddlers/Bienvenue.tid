@@ -1,0 +1,33 @@
+created: 20190427111053129
+modified: 20190427123838797
+tags: 
+title: Bienvenue
+type: text/vnd.tiddlywiki
+
+Bienvenue sur ce site web personnel contenant diverses informations, publications et notes.
+
+La navigation est un peu atypique au début, et je ne peux que vous inviter à découvrir [[TiddlyWiki|https://tiddlywiki.com/languages/fr-FR/index.html]] et sa philosophie pour mieux comprendre.
+
+!! Me contacter
+
+Vous pouvez me contacter et me retrouver ailleurs sur le web. Mes profils publics :
+
+* [[Email|mailto:contact@pierre-martin.fr]]
+* [[Twitter (@pierremartin)|https://twitter.com/pierremartin]]
+* [[Github (@real34)|https://github.com/real34]]
+* [[LinkedIn|https://www.linkedin.com/in/pierre-martin-0a0228181/]]
+* [[Mastodon|https://mamot.fr/@pierremartin]]
+
+!! Qui suis-je, que fais-je ?
+
+Je vis actuellement à Toulouse avec ma femme et mes deux enfants. 
+
+Je suis actif au sein de différents projets (par ordre alphabétique) :
+
+<<list-links "[tag[projet]sort[title]]" >>
+
+!! Autres pages
+
+Ce site me permet également de publier diverses notes et pages. En voici certaines :
+
+* [[Annonces / Dons]]

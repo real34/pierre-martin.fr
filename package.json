@@ -1,0 +1,29 @@
+{
+  "name": "pierre-martin.fr",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "index.js",
+  "scripts": {
+    "start": "tiddlywiki src --listen port=4242",
+    "build": "tiddlywiki src --build index",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d src/output",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/real34/pierre-martin.fr.git"
+  },
+  "author": "Pierre Martin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/real34/pierre-martin.fr/issues"
+  },
+  "homepage": "https://github.com/real34/pierre-martin.fr#readme",
+  "dependencies": {
+    "tiddlywiki": "^5.1.19"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
