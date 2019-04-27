@@ -145,6 +145,8 @@ Error message and password prompt
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/permaview</li>
 
+<li>$:/config/Plugins/Disabled/$:/plugins/tongerner/sro</li>
+
 <li>$:/config/Toolbar/ButtonClass</li>
 
 <li>$:/config/Toolbar/Text</li>
@@ -159,7 +161,17 @@ Error message and password prompt
 
 <li>$:/languages/fr-FR</li>
 
+<li>$:/palette</li>
+
 <li>$:/plugins/tiddlywiki/highlight</li>
+
+<li>$:/plugins/tongerner/sro</li>
+
+<li>$:/plugins/tongerner/sro/publish-button</li>
+
+<li>$:/plugins/tongerner/sro/readonly-styles</li>
+
+<li>$:/plugins/tongerner/sro/search</li>
 
 <li>$:/SiteSubtitle</li>
 
@@ -217,8 +229,11 @@ Error message and password prompt
 <div created="20190427122559451" modified="20190427122600520" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/permaview" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>show</pre>
 </div>
-<div created="20190427110933093" modified="20190427110940105" title="$:/config/Toolbar/ButtonClass" type="text/vnd.tiddlywiki" revision="0" bag="default">
-<pre>tc-btn-rounded</pre>
+<div created="20190427130502214" modified="20190427130504854" title="$:/config/Plugins/Disabled/$:/plugins/tongerner/sro" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>no</pre>
+</div>
+<div created="20190427110933093" modified="20190427130721324" title="$:/config/Toolbar/ButtonClass" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>tc-btn-invisible</pre>
 </div>
 <div created="20190427110952876" modified="20190427111000056" title="$:/config/Toolbar/Text" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>no</pre>
@@ -12750,6 +12765,9 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div created="20190427130551531" modified="20190427130636647" title="$:/palette" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>$:/palettes/Vanilla</pre>
+</div>
 <div author="JoaoBolila" core-version="&gt;=5.0.0" dependents="" description="Highlight.js: syntax highlighting" list="readme usage license" plugin-type="plugin" title="$:/plugins/tiddlywiki/highlight" type="application/json" version="5.1.19" revision="0" bag="default">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -12815,6 +12833,251 @@ Error message and password prompt
         }
     }
 }</pre>
+</div>
+<div author="TonGerner" core-version="&gt;=5.1.18" created="20170320194041545" description="Makes TW readonly" list="readme license help" modified="20190427130141296" name="Simple readonly" plugin-type="plugin" source="http://tongerner.tiddlyspot.com/" title="$:/plugins/tongerner/sro" type="application/json" version="0.1.1" revision="0" bag="default">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/plugins/tongerner/sro/change-settings&quot;: {
+            &quot;created&quot;: &quot;20170322105507933&quot;,
+            &quot;text&quot;: &quot;! Settings\nThese settings let you customise the view and sidebar layout of TiddlyWiki\n\n{{$:/snippets/viewswitcher}}\n{{$:/plugins/tongerner/sro/sidebar-layout}}\n\n---\n\n{{$:/core/ui/ControlPanel/Settings}}\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/sro/change-settings&quot;,
+            &quot;tags&quot;: &quot;$:/tags/publish&quot;,
+            &quot;order&quot;: &quot;3&quot;,
+            &quot;modified&quot;: &quot;20170322110609981&quot;,
+            &quot;caption&quot;: &quot;Settings&quot;
+        },
+        &quot;$:/plugins/tongerner/sro/help&quot;: {
+            &quot;text&quot;: &quot;! Help\nBefore you 'publish' (= make readonly) your ~TiddlyWiki:\n\n# Make a backup of your wiki\n# Get a defined start-up situation for your TW:\n#* Define your starting tiddler(s) in [[$:/DefaultTiddlers]]\n#* If required, define the state of the sidebar and the sidebar tabs\n# Click the button ''Hide buttons &amp; tabs'' in tab ''Buttons and sidebar tabs''\n# Adjust ''Settings'' in tab ''Settings''\n# Save in tab ''Save''\n\n&lt;&lt;&lt;\n''Note:''\n\n* [[$:/plugins/tongerner/sro/publish]] is also available as a tab in $:/ControlPanel (''$:/ControlPanel &gt; Appearance &gt; Publish'')\n* @@.RED When in readonly mode:@@ search in ''~AdvancedSearch'' (click hidden, but still active button {{$:/core/images/advanced-search-button}} (next to the search box), tab ''Shadows'':\n\n** for ''Publish'' to have access to:\n*** $:/plugins/tongerner/sro/publish\n** ''or''\n** for ''~ControlPanel'' to have access to:\n*** ''$:/ControlPanel &gt; Appearance &gt; Publish''\n\n:to recover tabs, unhide buttons, ...\n&lt;&lt;&lt;\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/sro/help&quot;,
+            &quot;tags&quot;: &quot;$:/tags/publish&quot;,
+            &quot;order&quot;: &quot;1&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20181223183359602&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;,
+            &quot;created&quot;: &quot;20170322105540899&quot;,
+            &quot;caption&quot;: &quot;Help&quot;
+        },
+        &quot;$:/plugins/tongerner/sro/hide-buttons-tabs&quot;: {
+            &quot;text&quot;: &quot;! Buttons &amp; sidebar tabs\n&lt;$button&gt;\n&lt;$action-listops $tiddler=\&quot;$:/plugins/tongerner/sro/publish-button\&quot; $tags=\&quot;-$:/tags/TopRightBar\&quot;/&gt;\n&lt;$action-listops $tiddler=\&quot;$:/plugins/tongerner/sro/readonly-styles\&quot; $tags=\&quot;$:/tags/Stylesheet\&quot;/&gt;\n&lt;$action-listops $tiddler=\&quot;$:/plugins/tongerner/sro/search\&quot; $tags=\&quot;$:/tags/SideBarSegment\&quot;/&gt;\nHide buttons &amp; tabs&lt;/$button&gt;\n\n&lt;$button&gt;\n&lt;$action-listops $tiddler=\&quot;$:/plugins/tongerner/sro/publish-button\&quot; $tags=\&quot;$:/tags/TopRightBar\&quot;/&gt;\n&lt;$action-listops $tiddler=\&quot;$:/plugins/tongerner/sro/readonly-styles\&quot; $tags=\&quot;-$:/tags/Stylesheet\&quot;/&gt;\n&lt;$action-listops $tiddler=\&quot;$:/plugins/tongerner/sro/search\&quot; $tags=\&quot;-$:/tags/SideBarSegment\&quot;/&gt;\nShow buttons &amp; tabs&lt;/$button&gt;\n\n&lt;&lt;&lt;\n''Note:''&lt;br&gt;&lt;&lt;slidertg \&quot;Predefined buttons &amp; sidebar tabs\&quot; \&quot;$:/plugins/tongerner/sro/predefined-buttons-tabs\&quot;&gt;&gt;\n&lt;&lt;&lt;\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/sro/hide-buttons-tabs&quot;,
+            &quot;tags&quot;: &quot;$:/tags/publish&quot;,
+            &quot;order&quot;: &quot;2&quot;,
+            &quot;modified&quot;: &quot;20181223171906876&quot;,
+            &quot;created&quot;: &quot;20170322105628418&quot;,
+            &quot;caption&quot;: &quot;Buttons &amp; sidebar tabs&quot;
+        },
+        &quot;$:/plugins/tongerner/sro/icon&quot;: {
+            &quot;text&quot;: &quot;&lt;svg width=\&quot;22pt\&quot; height=\&quot;22pt\&quot; viewBox=\&quot;0 0 100 100\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot; xmlns:svg=\&quot;http://www.w3.org/2000/svg\&quot;&gt;\n &lt;g&gt;\n  &lt;title&gt;Layer 1&lt;/title&gt;\n  &lt;g id=\&quot;layer1\&quot;&gt;\n   &lt;path fill=\&quot;#a0a0ff\&quot; stroke=\&quot;#a0a0ff\&quot; stroke-width=\&quot;1.2218\&quot; stroke-miterlimit=\&quot;4\&quot; id=\&quot;path4142\&quot; d=\&quot;m48.98237,97.8691l-41.98313,-24.239l0,-48.47796l41.98313,-24.23897l41.98313,24.23897l0,48.47796l-41.98313,24.239z\&quot;/&gt;\n   &lt;g id=\&quot;g4657\&quot; transform=\&quot;matrix(2.9000748,0,0,2.9000748,17.560041,968.58207) \&quot;&gt;\n    &lt;path fill=\&quot;#000000\&quot; stroke=\&quot;null\&quot; id=\&quot;editor_pencil_pen_edit_write_glyph\&quot; d=\&quot;m2.40166,-313.82635l4.72483,4.70973l10.79962,-10.7651l-4.72483,-4.70973l-10.79962,10.7651zm13.51982,-13.47661l-1.99364,1.98727l4.72409,4.70899l1.99364,-1.98727c0.6766,-0.67444 -0.00001,-1.34889 -0.00001,-1.34889l-3.37088,-3.3601c0,0 -0.6766,-0.67444 -1.3532,0zm-14.18411,14.11637l-0.99229,5.72125l5.7273,-1.00138l-4.735,-4.71987l-0.00001,0z\&quot;/&gt;\n    &lt;rect transform=\&quot;matrix(0.69825835,0.71584585,-0.71584585,0.69825835,11.119094,-4.6050809) \&quot; id=\&quot;svg_1\&quot; height=\&quot;2.10315\&quot; width=\&quot;26.11743\&quot; y=\&quot;-219.65699\&quot; x=\&quot;-237.30928\&quot; stroke-linecap=\&quot;null\&quot; stroke-linejoin=\&quot;null\&quot; stroke-width=\&quot;null\&quot;/&gt;\n   &lt;/g&gt;\n  &lt;/g&gt;\n &lt;/g&gt;\n&lt;/svg&gt;&quot;,
+            &quot;type&quot;: &quot;image/svg+xml&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/sro/icon&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20170725163000426&quot;,
+            &quot;created&quot;: &quot;20170322105647495&quot;
+        },
+        &quot;$:/plugins/tongerner/sro/image-save-button&quot;: {
+            &quot;text&quot;: &quot;&lt;svg class=\&quot;tgc-image-save-button tc-image-button\&quot; viewBox=\&quot;0 0 128 128\&quot; width=\&quot;22pt\&quot; height=\&quot;22pt\&quot;&gt;\n    &lt;g fill-rule=\&quot;evenodd\&quot;&gt;\n        &lt;path d=\&quot;M120.78304,34.329058 C125.424287,43.1924006 128.049406,53.2778608 128.049406,63.9764502 C128.049406,99.3226742 99.3956295,127.97645 64.0494055,127.97645 C28.7031816,127.97645 0.0494055385,99.3226742 0.0494055385,63.9764502 C0.0494055385,28.6302262 28.7031816,-0.0235498012 64.0494055,-0.0235498012 C82.8568763,-0.0235498012 99.769563,8.08898558 111.479045,21.0056358 L114.159581,18.3250998 C117.289194,15.1954866 122.356036,15.1939641 125.480231,18.3181584 C128.598068,21.4359957 128.601317,26.5107804 125.473289,29.6388083 L120.78304,34.329058 Z M108.72451,46.3875877 C110.870571,51.8341374 112.049406,57.767628 112.049406,63.9764502 C112.049406,90.4861182 90.5590735,111.97645 64.0494055,111.97645 C37.5397375,111.97645 16.0494055,90.4861182 16.0494055,63.9764502 C16.0494055,37.4667822 37.5397375,15.9764502 64.0494055,15.9764502 C78.438886,15.9764502 91.3495036,22.308215 100.147097,32.3375836 L58.9411255,73.5435552 L41.975581,56.5780107 C38.8486152,53.4510448 33.7746915,53.4551552 30.6568542,56.5729924 C27.5326599,59.6971868 27.5372202,64.7670668 30.6618725,67.8917192 L53.279253,90.5090997 C54.8435723,92.073419 56.8951519,92.8541315 58.9380216,92.8558261 C60.987971,92.8559239 63.0389578,92.0731398 64.6049211,90.5071765 L108.72451,46.3875877 Z\&quot;&gt;&lt;/path&gt;\n    &lt;/g&gt;\n&lt;/svg&gt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/sro/image-save-button&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20170322105717084&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;,
+            &quot;created&quot;: &quot;20170322105709315&quot;
+        },
+        &quot;$:/plugins/tongerner/sro/images/publish&quot;: {
+            &quot;created&quot;: &quot;20170322105731731&quot;,
+            &quot;text&quot;: &quot;&lt;svg class=\&quot;tgc-publish-sro tc-image-button\&quot; width=\&quot;22pt\&quot; height=\&quot;22pt\&quot; viewBox=\&quot;0 0 486 438\&quot;&gt;\n&lt;style&gt;\n  .sro {\n    fill:none;\n    stroke-width:40;\n    stroke:#FF0000;\n  }\n&lt;/style&gt;\n    &lt;path class=\&quot;sro\&quot; d=\&quot;m203.2 81.6l-141.6 0 0 311.7 313.3 0 0-139.5\&quot;/&gt;\n    &lt;path class=\&quot;sro\&quot; d=\&quot;m176.4 279.6l0-60 188-188 60.5 60.5 -189.5 189.5 -59 0\&quot;/&gt;\n    &lt;path class=\&quot;sro\&quot; d=\&quot;m326.9 69l61.1 61.1\&quot;/&gt;\n&lt;/svg&gt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/sro/images/publish&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20171116195627384&quot;
+        },
+        &quot;$:/plugins/tongerner/sro/predefined-buttons-tabs&quot;: {
+            &quot;text&quot;: &quot;@@.sliderBG\n&lt;div&gt;\n\n&lt;hr&gt;\n\n!!! &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Buttons\n# Page toolbar\n#* New button\n#* Control panel button\n#* Save button\n# View toolbar\n#* Edit button\n#* More button\n#* Info button\n# Edit toolbar\n#* Delete button\n#* Cancel button\n#* Done button\n# Top toolbar\n#* Sidebar button (to switch Sidebar) ^^''1''^^\n#* Publish button (opens menu for hiding/showing/saving tabs &amp; buttons) ^^22^^\n# Search\n#* Advanced search button (next to Search) ^^''1''^^\n\n!!! &amp;nbsp;&amp;nbsp;Sidebar tabs\n* Open\n* Recent\n* Tools\n* More\n* ...\n\n&amp;nbsp;&amp;nbsp;^^''1''^^ ''Sidebar button and Advanced search button will be hidden, but they stay active!''&lt;br&gt;\n&amp;nbsp;&amp;nbsp;^^''2''^^ ''Publish button will be hidden as well (not active!)''.\n\n&lt;hr&gt;\n\n&lt;/div&gt;\n@@\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/sro/predefined-buttons-tabs&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20170322105837273&quot;,
+            &quot;created&quot;: &quot;20170322105829625&quot;
+        },
+        &quot;$:/plugins/tongerner/sro/publish&quot;: {
+            &quot;created&quot;: &quot;20170322105850884&quot;,
+            &quot;text&quot;: &quot;!! Simple readonly plugin\n&lt;&lt;tabs \&quot;[all[shadows+tiddlers]tag[$:/tags/publish]nsort[order]]\&quot; \&quot;$:/plugins/tongerner/sro/help\&quot;&gt;&gt;\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/sro/publish&quot;,
+            &quot;tags&quot;: &quot;$:/tags/ControlPanel/Appearance&quot;,
+            &quot;modified&quot;: &quot;20171116194534309&quot;,
+            &quot;caption&quot;: &quot;Publish&quot;
+        },
+        &quot;$:/plugins/tongerner/sro/publish-button&quot;: {
+            &quot;text&quot;: &quot;&lt;$button class=\&quot;tc-btn-invisible\&quot; tooltip=\&quot;Publish simple read-only\&quot;&gt;\n&lt;$action-sendmessage $message=\&quot;tm-open-window\&quot; $param=\&quot;$:/plugins/tongerner/sro/publish\&quot; height=\&quot;700px\&quot; width=\&quot;500px\&quot;/&gt;\n{{$:/plugins/tongerner/sro/images/publish}}\n&lt;/$button&gt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/sro/publish-button&quot;,
+            &quot;tags&quot;: &quot;$:/tags/TopRightBar&quot;,
+            &quot;modified&quot;: &quot;20181223172206590&quot;,
+            &quot;list-before&quot;: &quot;$:/core/ui/TopBar/menu&quot;,
+            &quot;created&quot;: &quot;20170322105910944&quot;
+        },
+        &quot;$:/plugins/tongerner/sro/readme&quot;: {
+            &quot;created&quot;: &quot;20170322105934099&quot;,
+            &quot;text&quot;: &quot;A plugin to make ~TiddlyWiki read-only.&lt;br&gt;\nYou can hide - by clicking one button - a set of &lt;&lt;slidertg \&quot;predefined buttons &amp; sidebar tabs\&quot; \&quot;$:/plugins/tongerner/sro/predefined-buttons-tabs\&quot;&gt;&gt; and save this situation.\n\nClick the Publish button {{$:/plugins/tongerner/sro/images/publish}} next to the sidebar button {{$:/core/images/chevron-left}}/{{$:/core/images/chevron-right}} to start making your TW 'publish-ready'.  A new window with four tabs opens.\n\n&lt;&lt;&lt;\n''Note:''\n\n* [[$:/plugins/tongerner/sro/publish]] is also available as a tab in $:/ControlPanel (''$:/ControlPanel &gt; Appearance &gt; Publish'')\n* @@.RED Although you can hide the 'Sidebar' and 'Advanced Search' button, they remain 'active'!@@\n* @@.RED When in readonly mode:@@ search in ''~AdvancedSearch'' (click hidden, but still active button {{$:/core/images/advanced-search-button}} (next to the search box), tab ''Shadows'':\n\n** for ''Publish'' to have access to:\n*** $:/plugins/tongerner/sro/publish\n** ''or''\n** for ''~ControlPanel'' to have access to:\n*** ''$:/ControlPanel &gt; Appearance &gt; Publish''\n\n:to recover tabs, unhide buttons, ...\n&lt;&lt;&lt;\n\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/sro/readme&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20181223185158168&quot;,
+            &quot;caption&quot;: &quot;Simple mode&quot;
+        },
+        &quot;$:/plugins/tongerner/sro/readonly-styles&quot;: {
+            &quot;text&quot;: &quot;/* Readonly styles for buttons */\n\nsvg.tc-image-new-button,\nsvg.tc-image-options-button,\nsvg.tc-image-save-button,\nsvg.tc-image-edit-button,\nsvg.tc-image-delete-button,\nsvg.tc-image-cancel-button,\nsvg.tc-image-done-button,\nsvg.tc-image-down-arrow,\nsvg.tc-image-info-button,\nsvg.tc-image-chevron-right,\nsvg.tc-image-chevron-left,\nsvg.tgc-publish-sro {\n     display: none;\n}\n\n/* Hide advanced search button */\n\n.tc-image-advanced-search-button.tc-image-button {\n     padding-left: 15px;\n}\n\n.tc-sidebar-lists {\n     display: none;\n}\n&quot;,
+            &quot;type&quot;: &quot;text/css&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/sro/readonly-styles&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20181223172206591&quot;,
+            &quot;list-after&quot;: &quot;$:/themes/tiddlywiki/vanilla/base&quot;,
+            &quot;created&quot;: &quot;20170322105952964&quot;
+        },
+        &quot;$:/plugins/tongerner/sro/save&quot;: {
+            &quot;created&quot;: &quot;20170322110010997&quot;,
+            &quot;text&quot;: &quot;! Save\n\n{{$:/core/ui/ControlPanel/Saving}}\n\n@@.BLUE ''Save''@@ {{$:/plugins/tongerner/sro/save-button}}\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/sro/save&quot;,
+            &quot;tags&quot;: &quot;$:/tags/publish&quot;,
+            &quot;order&quot;: &quot;5&quot;,
+            &quot;modified&quot;: &quot;20170507114727899&quot;,
+            &quot;caption&quot;: &quot;Save&quot;
+        },
+        &quot;$:/plugins/tongerner/sro/save-button&quot;: {
+            &quot;text&quot;: &quot;&lt;$button message=\&quot;tm-save-wiki\&quot; param={{$:/config/SaveWikiButton/Template}}&gt;\n&lt;span class=\&quot;tc-dirty-indicator\&quot;&gt;\n{{$:/plugins/tongerner/sro/image-save-button}}\n&lt;/span&gt;\n&lt;/$button&gt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/sro/save-button&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20170405200811114&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;,
+            &quot;created&quot;: &quot;20170405200808621&quot;
+        },
+        &quot;$:/plugins/tongerner/sro/sidebar-layout&quot;: {
+            &quot;text&quot;: &quot;\\define lingo-base() $:/language/ThemeTweaks/\n\nSidebar layout: &lt;$select tiddler=\&quot;$:/themes/tiddlywiki/vanilla/options/sidebarlayout\&quot;&gt;&lt;option value=\&quot;fixed-fluid\&quot;&gt;&lt;&lt;lingo Options/SidebarLayout/Fixed-Fluid&gt;&gt;&lt;/option&gt;&lt;option value=\&quot;fluid-fixed\&quot;&gt;&lt;&lt;lingo Options/SidebarLayout/Fluid-Fixed&gt;&gt;&lt;/option&gt;&lt;/$select&gt;\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/sro/sidebar-layout&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20170322110059742&quot;,
+            &quot;created&quot;: &quot;20170322110052858&quot;
+        },
+        &quot;$:/plugins/tongerner/sro/slider-macro&quot;: {
+            &quot;text&quot;: &quot;\\define slidertg(label,text)\n&lt;$button popup=\&quot;$:/state/$label$\&quot; class=\&quot;tc-btn-invisible tgc-slider\&quot;&gt;&lt;$text text=\&quot;$label$ »\&quot;/&gt;&lt;/$button&gt;\n&lt;$reveal type=\&quot;nomatch\&quot; text=\&quot;\&quot; default=\&quot;\&quot; state=\&quot;$:/state/$label$\&quot; animate=\&quot;yes\&quot;&gt;\n\n{{$text$}}\n\n&lt;/$reveal&gt;\n\\end&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/sro/slider-macro&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Macro&quot;,
+            &quot;modified&quot;: &quot;20170322110117299&quot;,
+            &quot;created&quot;: &quot;20170322110111515&quot;
+        },
+        &quot;$:/plugins/tongerner/sro/styles&quot;: {
+            &quot;text&quot;: &quot;/* Slider style */\n\nhtml .tgc-slider {\n     color: #5778D8;\n     font-weight: bold;\n}\n\n.tgc-slider:hover {\n     color: #5778D8;\n     text-decoration: underline;\n}\n\n.sliderBG {\n     color: #000080;\n     background-color: #F7FAFF;\n}\n\n.RED {\n     color: red;\n     font-weight: bold;\n}\n\n.BLUE {\n     color: blue;\n     font-weight: bold;\n}&quot;,
+            &quot;type&quot;: &quot;text/css&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/sro/styles&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
+            &quot;modified&quot;: &quot;20170322110131941&quot;,
+            &quot;created&quot;: &quot;20170322110126226&quot;
+        },
+        &quot;$:/plugins/tongerner/sro/license&quot;: {
+            &quot;text&quot;: &quot;[[Simple readonly plugin|http://tongerner.tiddlyspot.com/#Simple%20readonly%20plugin]] &amp;copy; Ton Gerner &amp;mdash; 2018\n\nMIT License: https://opensource.org/licenses/MIT\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/sro/license&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20180129132325806&quot;,
+            &quot;created&quot;: &quot;20180124175247498&quot;
+        },
+        &quot;$:/plugins/tongerner/sro/search&quot;: {
+            &quot;text&quot;: &quot;&lt;div class=\&quot;tc-sidebar-lists_\&quot;&gt;\n\n&lt;$set name=\&quot;searchTiddler\&quot; value=\&quot;$:/temp/search\&quot;&gt;\n&lt;div class=\&quot;tc-search\&quot;&gt;\n&lt;$edit-text tiddler=\&quot;$:/temp/search\&quot; type=\&quot;search\&quot; tag=\&quot;input\&quot; focus={{$:/config/Search/AutoFocus}} focusPopup=&lt;&lt;qualify \&quot;$:/state/popup/search-dropdown\&quot;&gt;&gt; class=\&quot;tc-popup-handle\&quot;/&gt;\n&lt;$reveal state=\&quot;$:/temp/search\&quot; type=\&quot;nomatch\&quot; text=\&quot;\&quot;&gt;\n&lt;$button tooltip={{$:/language/Buttons/AdvancedSearch/Hint}} aria-label={{$:/language/Buttons/AdvancedSearch/Caption}} class=\&quot;tc-btn-invisible\&quot;&gt;\n&lt;$action-setfield $tiddler=\&quot;$:/temp/advancedsearch\&quot; text={{$:/temp/search}}/&gt;\n&lt;$action-setfield $tiddler=\&quot;$:/temp/search\&quot; text=\&quot;\&quot;/&gt;\n&lt;$action-navigate $to=\&quot;$:/AdvancedSearch\&quot;/&gt;\n{{$:/core/images/advanced-search-button}}\n&lt;/$button&gt;\n&lt;$button class=\&quot;tc-btn-invisible\&quot;&gt;\n&lt;$action-setfield $tiddler=\&quot;$:/temp/search\&quot; text=\&quot;\&quot; /&gt;\n{{$:/core/images/close-button}}\n&lt;/$button&gt;\n&lt;$button popup=&lt;&lt;qualify \&quot;$:/state/popup/search-dropdown\&quot;&gt;&gt; class=\&quot;tc-btn-invisible\&quot;&gt;\n{{$:/core/images/down-arrow}}\n&lt;$list filter=\&quot;[{$:/temp/search}minlength{$:/config/Search/MinLength}limit[1]]\&quot; variable=\&quot;listItem\&quot;&gt;\n&lt;$set name=\&quot;searchTerm\&quot; value={{{ [&lt;searchTiddler&gt;get[text]] }}}&gt;\n&lt;$set name=\&quot;resultCount\&quot; value=\&quot;\&quot;\&quot;&lt;$count filter=\&quot;[!is[system]search&lt;searchTerm&gt;]\&quot;/&gt;\&quot;\&quot;\&quot;&gt;\n{{$:/language/Search/Matches}}\n&lt;/$set&gt;\n&lt;/$set&gt;\n&lt;/$list&gt;\n&lt;/$button&gt;\n&lt;/$reveal&gt;\n&lt;$reveal state=\&quot;$:/temp/search\&quot; type=\&quot;match\&quot; text=\&quot;\&quot;&gt;\n&lt;$button to=\&quot;$:/AdvancedSearch\&quot; tooltip={{$:/language/Buttons/AdvancedSearch/Hint}} aria-label={{$:/language/Buttons/AdvancedSearch/Caption}} class=\&quot;tc-btn-invisible\&quot;&gt;\n{{$:/core/images/advanced-search-button}}\n&lt;/$button&gt;\n&lt;/$reveal&gt;\n&lt;/div&gt;\n\n&lt;$reveal tag=\&quot;div\&quot; class=\&quot;tc-block-dropdown-wrapper\&quot; state=\&quot;$:/temp/search\&quot; type=\&quot;nomatch\&quot; text=\&quot;\&quot;&gt;\n\n&lt;$reveal tag=\&quot;div\&quot; class=\&quot;tc-block-dropdown tc-search-drop-down tc-popup-handle\&quot; state=&lt;&lt;qualify \&quot;$:/state/popup/search-dropdown\&quot;&gt;&gt; type=\&quot;nomatch\&quot; text=\&quot;\&quot; default=\&quot;\&quot;&gt;\n\n&lt;$list filter=\&quot;[{$:/temp/search}minlength{$:/config/Search/MinLength}limit[1]]\&quot; emptyMessage=\&quot;\&quot;\&quot;&lt;div class=\&quot;tc-search-results\&quot;&gt;{{$:/language/Search/Search/TooShort}}&lt;/div&gt;\&quot;\&quot;\&quot; variable=\&quot;listItem\&quot;&gt;\n\n{{$:/core/ui/SearchResults}}\n\n&lt;/$list&gt;\n\n&lt;/$reveal&gt;\n\n&lt;/$reveal&gt;\n\n&lt;/$set&gt;\n\n&lt;/div&gt;\n\n\n\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/sro/search&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20181223172206592&quot;,
+            &quot;created&quot;: &quot;20181221200154739&quot;
+        }
+    }
+}</pre>
+</div>
+<div created="20170322105910944" list-before="$:/core/ui/TopBar/menu" modified="20190427130738041" tags="" title="$:/plugins/tongerner/sro/publish-button" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>&lt;$button class=&quot;tc-btn-invisible&quot; tooltip=&quot;Publish simple read-only&quot;&gt;
+&lt;$action-sendmessage $message=&quot;tm-open-window&quot; $param=&quot;$:/plugins/tongerner/sro/publish&quot; height=&quot;700px&quot; width=&quot;500px&quot;/&gt;
+{{$:/plugins/tongerner/sro/images/publish}}
+&lt;/$button&gt;</pre>
+</div>
+<div created="20170322105952964" list-after="$:/themes/tiddlywiki/vanilla/base" modified="20190427130738026" tags="$:/tags/Stylesheet" title="$:/plugins/tongerner/sro/readonly-styles" type="text/css" revision="0" bag="default">
+<pre>/* Readonly styles for buttons */
+
+svg.tc-image-new-button,
+svg.tc-image-options-button,
+svg.tc-image-save-button,
+svg.tc-image-edit-button,
+svg.tc-image-delete-button,
+svg.tc-image-cancel-button,
+svg.tc-image-done-button,
+svg.tc-image-down-arrow,
+svg.tc-image-info-button,
+svg.tc-image-chevron-right,
+svg.tc-image-chevron-left,
+svg.tgc-publish-sro {
+     display: none;
+}
+
+/* Hide advanced search button */
+
+.tc-image-advanced-search-button.tc-image-button {
+     padding-left: 15px;
+}
+
+.tc-sidebar-lists {
+     display: none;
+}
+</pre>
+</div>
+<div created="20181221200154739" modified="20190427130738052" tags="$:/tags/SideBarSegment" title="$:/plugins/tongerner/sro/search" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>&lt;div class=&quot;tc-sidebar-lists_&quot;&gt;
+
+&lt;$set name=&quot;searchTiddler&quot; value=&quot;$:/temp/search&quot;&gt;
+&lt;div class=&quot;tc-search&quot;&gt;
+&lt;$edit-text tiddler=&quot;$:/temp/search&quot; type=&quot;search&quot; tag=&quot;input&quot; focus={{$:/config/Search/AutoFocus}} focusPopup=&lt;&lt;qualify &quot;$:/state/popup/search-dropdown&quot;&gt;&gt; class=&quot;tc-popup-handle&quot;/&gt;
+&lt;$reveal state=&quot;$:/temp/search&quot; type=&quot;nomatch&quot; text=&quot;&quot;&gt;
+&lt;$button tooltip={{$:/language/Buttons/AdvancedSearch/Hint}} aria-label={{$:/language/Buttons/AdvancedSearch/Caption}} class=&quot;tc-btn-invisible&quot;&gt;
+&lt;$action-setfield $tiddler=&quot;$:/temp/advancedsearch&quot; text={{$:/temp/search}}/&gt;
+&lt;$action-setfield $tiddler=&quot;$:/temp/search&quot; text=&quot;&quot;/&gt;
+&lt;$action-navigate $to=&quot;$:/AdvancedSearch&quot;/&gt;
+{{$:/core/images/advanced-search-button}}
+&lt;/$button&gt;
+&lt;$button class=&quot;tc-btn-invisible&quot;&gt;
+&lt;$action-setfield $tiddler=&quot;$:/temp/search&quot; text=&quot;&quot; /&gt;
+{{$:/core/images/close-button}}
+&lt;/$button&gt;
+&lt;$button popup=&lt;&lt;qualify &quot;$:/state/popup/search-dropdown&quot;&gt;&gt; class=&quot;tc-btn-invisible&quot;&gt;
+{{$:/core/images/down-arrow}}
+&lt;$list filter=&quot;[{$:/temp/search}minlength{$:/config/Search/MinLength}limit[1]]&quot; variable=&quot;listItem&quot;&gt;
+&lt;$set name=&quot;searchTerm&quot; value={{{ [&lt;searchTiddler&gt;get[text]] }}}&gt;
+&lt;$set name=&quot;resultCount&quot; value=&quot;&quot;&quot;&lt;$count filter=&quot;[!is[system]search&lt;searchTerm&gt;]&quot;/&gt;&quot;&quot;&quot;&gt;
+{{$:/language/Search/Matches}}
+&lt;/$set&gt;
+&lt;/$set&gt;
+&lt;/$list&gt;
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;$reveal state=&quot;$:/temp/search&quot; type=&quot;match&quot; text=&quot;&quot;&gt;
+&lt;$button to=&quot;$:/AdvancedSearch&quot; tooltip={{$:/language/Buttons/AdvancedSearch/Hint}} aria-label={{$:/language/Buttons/AdvancedSearch/Caption}} class=&quot;tc-btn-invisible&quot;&gt;
+{{$:/core/images/advanced-search-button}}
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;/div&gt;
+
+&lt;$reveal tag=&quot;div&quot; class=&quot;tc-block-dropdown-wrapper&quot; state=&quot;$:/temp/search&quot; type=&quot;nomatch&quot; text=&quot;&quot;&gt;
+
+&lt;$reveal tag=&quot;div&quot; class=&quot;tc-block-dropdown tc-search-drop-down tc-popup-handle&quot; state=&lt;&lt;qualify &quot;$:/state/popup/search-dropdown&quot;&gt;&gt; type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot;&gt;
+
+&lt;$list filter=&quot;[{$:/temp/search}minlength{$:/config/Search/MinLength}limit[1]]&quot; emptyMessage=&quot;&quot;&quot;&lt;div class=&quot;tc-search-results&quot;&gt;{{$:/language/Search/Search/TooShort}}&lt;/div&gt;&quot;&quot;&quot; variable=&quot;listItem&quot;&gt;
+
+{{$:/core/ui/SearchResults}}
+
+&lt;/$list&gt;
+
+&lt;/$reveal&gt;
+
+&lt;/$reveal&gt;
+
+&lt;/$set&gt;
+
+&lt;/div&gt;
+
+
+
+</pre>
 </div>
 <div created="20190427110207049" modified="20190427110314246" title="$:/SiteSubtitle" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>site web personnel et notes diverses</pre>
