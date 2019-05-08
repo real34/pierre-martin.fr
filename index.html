@@ -147,6 +147,8 @@ Error message and password prompt
 
 <li>$:/config/Plugins/Disabled/$:/plugins/tongerner/sro</li>
 
+<li>$:/config/RelinkOnRename</li>
+
 <li>$:/config/Toolbar/ButtonClass</li>
 
 <li>$:/config/Toolbar/Text</li>
@@ -191,21 +193,33 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla/options/stickytitles</li>
 
+<li>Animation de réseau de voisinage</li>
+
 <li>Annonces / Dons</li>
+
+<li>Ateliers d’apprentissage du code</li>
 
 <li>Bienvenue</li>
 
 <li>commit42</li>
 
+<li>Démocratie permanente (Frouzins/Muretain)</li>
+
 <li>Ethersys</li>
 
 <li>Front-Commerce</li>
+
+<li>Givebox</li>
 
 <li>La Chouette Coop</li>
 
 <li>Occitech</li>
 
 <li>Personal Manifesto</li>
+
+<li>Projets citoyens</li>
+
+<li>Supermarché coopératif à Frouzins</li>
 
 </ul>
 </p>
@@ -231,6 +245,9 @@ Error message and password prompt
 </div>
 <div created="20190427130502214" modified="20190427130504854" title="$:/config/Plugins/Disabled/$:/plugins/tongerner/sro" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>no</pre>
+</div>
+<div created="20190508040754907" modified="20190508040756025" title="$:/config/RelinkOnRename" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>yes</pre>
 </div>
 <div created="20190427110933093" modified="20190427130721324" title="$:/config/Toolbar/ButtonClass" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>tc-btn-invisible</pre>
@@ -12987,13 +13004,13 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20170322105910944" list-before="$:/core/ui/TopBar/menu" modified="20190427130738041" tags="" title="$:/plugins/tongerner/sro/publish-button" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div created="20170322105910944" list-before="$:/core/ui/TopBar/menu" modified="20190508043323508" tags="" title="$:/plugins/tongerner/sro/publish-button" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>&lt;$button class=&quot;tc-btn-invisible&quot; tooltip=&quot;Publish simple read-only&quot;&gt;
 &lt;$action-sendmessage $message=&quot;tm-open-window&quot; $param=&quot;$:/plugins/tongerner/sro/publish&quot; height=&quot;700px&quot; width=&quot;500px&quot;/&gt;
 {{$:/plugins/tongerner/sro/images/publish}}
 &lt;/$button&gt;</pre>
 </div>
-<div created="20170322105952964" list-after="$:/themes/tiddlywiki/vanilla/base" modified="20190427130738026" tags="$:/tags/Stylesheet" title="$:/plugins/tongerner/sro/readonly-styles" type="text/css" revision="0" bag="default">
+<div created="20170322105952964" list-after="$:/themes/tiddlywiki/vanilla/base" modified="20190508043323501" tags="$:/tags/Stylesheet" title="$:/plugins/tongerner/sro/readonly-styles" type="text/css" revision="0" bag="default">
 <pre>/* Readonly styles for buttons */
 
 svg.tc-image-new-button,
@@ -13022,7 +13039,7 @@ svg.tgc-publish-sro {
 }
 </pre>
 </div>
-<div created="20181221200154739" modified="20190427130738052" tags="$:/tags/SideBarSegment" title="$:/plugins/tongerner/sro/search" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div created="20181221200154739" modified="20190508043323494" tags="$:/tags/SideBarSegment" title="$:/plugins/tongerner/sro/search" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>&lt;div class=&quot;tc-sidebar-lists_&quot;&gt;
 
 &lt;$set name=&quot;searchTiddler&quot; value=&quot;$:/temp/search&quot;&gt;
@@ -13220,6 +13237,23 @@ svg.tgc-publish-sro {
 <div created="20190427110749263" modified="20190427110758786" title="$:/themes/tiddlywiki/vanilla/options/stickytitles" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>no</pre>
 </div>
+<div created="20190508041718615" modified="20190508042406530" tags="[[Projet citoyen]]" title="Animation de réseau de voisinage" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>Dans le but de tisser du lien social (soirées, sorties, enfants, entraide) et de partage d’objets (tondeuse, perceuse, machine à raclette…) je suis intéressé par l’animation de mon voisinage.
+
+Je n’ai malheureusement pas énormément de temps à y consacrer et ne sait pas trop par où commencer ni comment m’y prendre pour faciliter les interactions sans brusquer les personnes qui ne seraient pas intéréssées.
+
+C’est notamment un sujet sur lequel j’ai des doutes sur la pertinence d’outils numériques.
+
+!! Expérimentations
+
+Je commence à expérimenter un groupe Whatsapp + emails au sujet d’un sujet de copropriété.
+
+Organisation de la fête des voisins et sa pérennisation.
+
+!! Ressources
+
+* https://mesvoisins.fr/</pre>
+</div>
 <div created="20190427121401753" modified="20190427122501915" tags="page" title="Annonces / Dons" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>Mon penchant pour le minimalisme, et mes valeurs m’amènent naturellement à me tourner vers [[le réemploi (lien externe)|https://lesecolohumanistes.fr/reemploi/]].
 
@@ -13229,6 +13263,35 @@ Je publierai peut-être un jour mes annonces sur cet espace, mais en attendant j
 
 * [[sur leboncoin (real34)|https://www.leboncoin.fr/profil/6b3e72c3-26a7-42e1-808a-4ec1b66c0506/offres/]]
 * [[sur donnons.org (real34)|https://donnons.org/profil/compte-124731]]</pre>
+</div>
+<div created="20190508034653652" modified="20190508040758645" tags="[[Projet citoyen]]" title="Ateliers d’apprentissage du code" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>Savoir coder (ou au moins en avoir une compréhension basique) me semble être un savoir primordial pour notre génération et surtout les futures. Je crains un manque de maturité des programmes scolaires pour l’apprentissage de ce domaine, ainsi qu’un manque de représentativité des personnes impliquées dans ce secteur.
+
+Mon expérience du métier de développeur, ma passion pour la transmission (software crafting…) me font penser que je pourrais apporter à diverses personnes en partageant mon expérience ou simplement en étant moteur sur l’organisation ou la participation à des évènements / ateliers voir au mentoring.
+
+Étant également père de 2 enfants entrant en âge d’apprendre ce domaine, je suis principalement intéressé par des ateliers [[Scratch|https://fr.wikipedia.org/wiki/Scratch_(langage)]] de type [[« Coding goûter »|https://codinggouter.org/doku.php]] ciblant un public de primaire / collège / lycée.
+
+D’autre part, je suis également intéressé pour du mentoring ou des ateliers à destination de personnes minoritaires dans le métier et pouvant parfois se sentir harcelées par d’autres.
+
+!! Ressources
+
+!!! Scratch
+
+* https://codinggouter.org/
+* http://www.wikidebrouillard.org/index.php?title=S%C3%A9ance_scratch
+* https://fr.slideshare.net/chrisagon/nouvelles-organisation-des-ateliers-scratch-15700502?related=1
+* https://scratch.mit.edu/
+* https://medium.com/scratchteam-blog/3-things-to-know-about-scratch-3-0-18ee2f564278
+* https://olpc-france.org/
+
+!!! Autres initiatives
+
+* https://www.duchess-france.org/
+* https://codelikeagirl.org/
+* http://www.blackmencode.org/
+* http://www.code2040.org/
+* http://www.blackgirlscode.com/
+* http://www.mothercoders.org/</pre>
 </div>
 <div created="20190427111053129" modified="20190427123838797" tags="" title="Bienvenue" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>Bienvenue sur ce site web personnel contenant diverses informations, publications et notes.
@@ -13265,6 +13328,19 @@ Ce site me permet également de publier diverses notes et pages. En voici certai
 
 commit42 est une //entreprise libérée//, spécialisée dans le développement web (PWA) et e-commerce. </pre>
 </div>
+<div created="20190508042734938" modified="20190508043221651" tags="[[Projet citoyen]]" title="Démocratie permanente (Frouzins/Muretain)" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>À l’échelle locale, et afin de tenter de réimpliquer les citoyennes et citoyens dans les choix politiques tout en favorisant le débât et discussions je trouve les initiatives autour de la démocratie permanente très intéressantes.
+
+À Toulouse, par exemple [[Archipel Citoyen|https://www.larchipelcitoyen.org/]] a bien documenté les différentes ressources et expérimentations.
+
+Participer (au moins en tant que « simple citoyen ») à ce type d’initiative sur ma commune m’intéresserait donc naturellement.
+
+!! Ressources
+
+* https://www.lanouvellerepublique.fr/blois/democratie-permanente-ca-ne-fait-que-commencer
+* https://theconversation.com/grand-debat-et-si-on-commencait-par-des-assemblees-citoyennes-109733
+* https://www.larchipelcitoyen.org/a-propos/nos-principes/</pre>
+</div>
 <div created="20190427120808619" modified="20190427121317573" tags="projet" title="Ethersys" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>Depuis 2018, je suis co-propriétaire de la société [[Ethersys|https://www.ethersys.fr/]] spécialisée en hébergement web et infogérance.
 
@@ -13274,6 +13350,20 @@ Ce projet est la concrétisation d’une collaboration avec Cyprien Devillez, da
 <pre>Incubé au sein d’[[Occitech]], je travaille sur le produit [[Front-Commerce|https://www.front-commerce.com/]] permettant aux e-commerçants et agences de construire des boutiques en ligne centrées utilisateur en tirant partie de technologies web modernes et performantes.
 
 Depuis 2019, je travaille au quotidien sur le développement de ce projet.</pre>
+</div>
+<div created="20190508040853382" modified="20190508041612718" tags="[[Projet citoyen]]" title="Givebox" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>Étant intéressé par l’économie circulaire et la simplicité volontaire, je pense qu’introduire un endroit facilitant la transmission d’objets au sein d’une communauté locale a un intérêt.
+
+Mon but serait de commencer par la mise en place d’une givebox dans mon quartier (école…) puis de voir où cela me/nous mène : construction, entretien, promotion, éducation…
+
+!! Ressources
+
+* http://movilab.org/index.php?title=Give_Box
+* https://www.consoglobe.com/givebox-boite-don-cg
+* https://www.facebook.com/GiveboxFrance/
+* https://www.say-yess.com/2015/7758/comment-creer-une-givebox/
+
+//PS : [[j’ai des choses à donner|Annonces / Dons]] ;)//</pre>
 </div>
 <div created="20190427115043641" modified="20190427115936571" tags="projet" title="La Chouette Coop" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>J’ai rejoins le projet de supermarché coopératif Toulousain [[La Chouette Coop|https://lachouettecoop.fr/]] en 2015, dès ses premiers mois de vie.
@@ -13391,6 +13481,33 @@ Ci-dessous une liste de conseils divers pour aider à maintenir ce document.
 * Finalize the manifesto. Print it out or publish it =&gt; challenge yourself to ''actually live it''!
 * Make it public, or read it //every day// (helps being accountable)
 </pre>
+</div>
+<div created="20190508033058887" modified="20190508033942623" tags="" title="Projets citoyens" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>Mes valeurs, compétences et mon envie continuelle d’apprendre m’amènent fréquemment à penser à des projets qui me font sens.
+
+Le temps étant limité et ayant déjà divers projets en cours ainsi que des priorités (famille, temps seul…) il ne m’est pas possible de tout mener de front.
+Néanmoins, il y a très vraisemblablement des projets que j’entamerai dans les années à venir en remplacement ou complément des mes engagements en cours.
+
+Cette page recense ces projets, dans le but de documenter mes idées pour chacun d’entre eux et pourquoi pas de fédérer d’autres personnes pour rendre ceux-ci réalisables et poser une première pierre !
+
+!! Liste des projets
+
+//(ordre alphabétique)//
+
+&lt;&lt;list-links &quot;[tag[Projet citoyen]sort[title]]&quot; &gt;&gt;</pre>
+</div>
+<div created="20190508033945194" modified="20190508034636164" tags="[[Projet citoyen]]" title="Supermarché coopératif à Frouzins" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>Dans la suite logique de mon investissement dans [[La Chouette Coop]], il fait sens de m’investir dans un projet plus proche de chez moi.
+
+En effet, bien qu’investi dans le projet je ne peux changer mon quotidien et mes habitudes pour faire l’essentiel de mes courses au sein du supermarché.
+
+Ainsi, je souhaiterai un jour mettre à disposition mon temps et mon expérience afin de monter une structure locale sur Frouzins.
+
+Je pense de plus qu’une synergie et mise en commun de certains aspects entre une structure locale et LCC pourrait permettre un démarrage rapide tout en explorant une forme d’essaimage et de collaboration entre projets de supermarchés proches… poussant un peu plus l’exploration de l’innovation sociale.
+
+!! Ressources
+
+* https://forum.supermarches-cooperatifs.fr/</pre>
 </div>
 
 </div>
