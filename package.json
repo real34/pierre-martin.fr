@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "tiddlywiki src --listen port=4242",
-    "build": "tiddlywiki src --build index",
+    "build:spa": "tiddlywiki src --build index",
+    "build:static": "tiddlywiki src --rendertiddlers [!is[system]] $:/core/templates/static.tiddler.html static text/plain && tiddlywiki src --rendertiddler $:/core/templates/static.template.html auth text/plain && tiddlywiki src --rendertiddler $:/core/templates/static.template.css static/static.css text/plain",
+    "build": "npm run build:spa && npm run build:static",
     "predeploy": "npm run build && cp CNAME src/output",
     "deploy": "gh-pages -d src/output",
     "test": "echo \"Error: no test specified\" && exit 1"
