@@ -1,5 +1,5 @@
 created: 20190427111053129
-modified: 20190427123838797
+modified: 20190510053619723
 tags: 
 title: Bienvenue
 type: text/vnd.tiddlywiki
@@ -12,11 +12,13 @@ La navigation est un peu atypique au début, et je ne peux que vous inviter à d
 
 Vous pouvez me contacter et me retrouver ailleurs sur le web. Mes profils publics :
 
-* [[Email|mailto:contact@pierre-martin.fr]]
-* [[Twitter (@pierremartin)|https://twitter.com/pierremartin]]
-* [[Github (@real34)|https://github.com/real34]]
-* [[LinkedIn|https://www.linkedin.com/in/pierre-martin-0a0228181/]]
-* [[Mastodon|https://mamot.fr/@pierremartin]]
+<ul>
+  <li><a href="mailto:contact@pierre-martin.fr" rel="me">Email</a></li>
+  <li><a href="https://twitter.com/pierremartin" rel="me">Twitter</a></li>
+  <li><a href="https://github.com/real34" rel="me">Github</a></li>
+  <li><a href="https://www.linkedin.com/in/pierre-martin-0a0228181" rel="me">~LinkedIn</a></li>
+  <li><a href="https://mamot.fr/@pierremartin" rel="me">Mastodon</a></li>
+</ul>
 
 !! Qui suis-je, que fais-je ?
 
