@@ -1,0 +1,5 @@
+<link href="mailto:contact@pierre-martin.fr" rel="me" />
+<link href="https://twitter.com/pierremartin" rel="me" />
+<link href="https://github.com/real34" rel="me" />
+<link href="https://www.linkedin.com/in/pierre-martin-0a0228181" rel="me" />
+<link href="https://mamot.fr/@pierremartin" rel="me" />
